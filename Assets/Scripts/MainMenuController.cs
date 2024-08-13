@@ -26,17 +26,21 @@ public class MainMenuController : MonoBehaviour
     }
     public void NextCredit() 
     {
+        CreditPages[currentCreditPage].SetActive(false);
         if (currentCreditPage != (CreditPages.Count - 1))
-        {
-            
-        }
+            currentCreditPage++;
+        else
+            currentCreditPage = 0;
+        CreditPages[currentCreditPage].SetActive(true);
     }
     public void PreviousCredit() 
     {
+        CreditPages[currentCreditPage].SetActive(false);
         if (currentCreditPage != 0)
-        {
-            
-        }
+            currentCreditPage--;
+        else
+            currentCreditPage = CreditPages.Count - 1;
+        CreditPages[currentCreditPage].SetActive(true);
     }
     public void Quit()
     {
