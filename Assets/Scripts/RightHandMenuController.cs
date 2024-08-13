@@ -25,6 +25,5 @@ public class RightHandMenuController : MonoBehaviour
             LeftHand.SetActive(true);
             gameObject.SetActive(false);
         }
-        Debug.Log(Input.mousePosition.x);
     }
 }
